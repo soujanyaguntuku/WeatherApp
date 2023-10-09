@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="WeatherApp.UI.DailyForecastView"
+    xmlns:local="clr-namespace:WeatherApp.Converters"
+    BindingContext="{Binding WeatherDataViewModel}">
+
+     <ContentView.Resources>
+        <ResourceDictionary>
+            <local:StringToDateTimeConverter x:Key="stringToDateTimeConverter" />
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <StackLayout>
+          <Label Text="Next 10-days forecast"
+                   TextColor="LightGray"
+                   FontSize="Header"/>
+        <ListView ItemsSource="{Binding WeatherDataList}"
+                    BackgroundColor="Transparent" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                     <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding Main.Temperature}"
+                               TextColor="White"
+                               Margin="10,10,10,5"
+                               FontAttributes="Bold"
+                               FontSize="Medium"
+                               HorizontalOptions="Fill"
+                               HorizontalTextAlignment="Start"/>
+                            <Label Text="{Binding Weather[0].Visibility}"
+                               TextColor="White"
+                               Margin="10,10,10,5"
+                               FontAttributes="Bold"
+                               FontSize="Medium"
+                               HorizontalOptions="EndAndExpand"
+                               HorizontalTextAlignment="Start"
+                               VerticalTextAlignment="Center"/>
+                             <Label Text="{Binding CurrentDate,Converter={StaticResource stringToDateTimeConverter}}"
+                               TextColor="White"
+                               Margin="10,10,10,5"
+                               FontAttributes="Bold"
+                               FontSize="Medium"
+                               HorizontalOptions="EndAndExpand"
+                               HorizontalTextAlignment="Start"
+                               VerticalTextAlignment="Center"/>
+                             
+                        </StackLayout>
+                     </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+            </StackLayout>
+    </ContentView.Content>
+</ContentView>
+

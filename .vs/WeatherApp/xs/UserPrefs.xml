@@ -1,0 +1,5 @@
+﻿<Properties StartupConfiguration="{B4C66579-CCD9-46A8-812D-4619B1B7A100}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.WeatherApp.iOS FirstBuild="True" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.401A9A6C-BFF7-4EBC-B50C-92B0CD5645A7" />
+  <MonoDevelop.Ide.ItemProperties.WeatherApp.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+</Properties>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xct:Popup
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    xmlns:viewmodels="clr-namespace:WeatherApp.ViewModels"
+    x:Class="WeatherApp.UI.SettingsPopup"
+    Size="150,100"
+    VerticalOptions="End"
+    HorizontalOptions="End"
+    >
+     <xct:Popup.Resources>
+        <ResourceDictionary>
+             <Style x:Key="Title" TargetType="Label">
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="SteelBlue" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+            <Style x:Key="Divider" TargetType="BoxView">
+                <Setter Property="HeightRequest" Value="1" />
+                <Setter Property="Color" Value="SteelBlue" />
+                <Setter Property="Margin" Value="10,0" />
+            </Style>
+        </ResourceDictionary>
+    </xct:Popup.Resources>
+    <StackLayout>
+        <Label Style="{StaticResource Title}"
+               Text="Change Location">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ChangeLocationCommand}" />
+            </Label.GestureRecognizers>
+        </Label>
+         <BoxView Style="{StaticResource Divider}" />
+         <Label Style="{StaticResource Title}"
+                Text="Celsius (C)">
+             <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CelsiusCommand}" />
+            </Label.GestureRecognizers>
+         </Label>
+        <BoxView Style="{StaticResource Divider}" />
+        <Label Style="{StaticResource Title}"
+                Text="Farenheat (F)">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding FahrenheitCommand}" />
+            </Label.GestureRecognizers>
+        </Label>
+    </StackLayout>
+</xct:Popup>
+

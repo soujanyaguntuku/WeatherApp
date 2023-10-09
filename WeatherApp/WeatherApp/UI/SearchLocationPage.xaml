@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModels="clr-namespace:WeatherApp.ViewModels"
+    x:Class="WeatherApp.UI.SearchLocationPage">
+    <ContentPage.BindingContext>
+        <viewModels:CityListViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar
+                Placeholder="Enter the City Name..."
+                Text="{Binding SearchText}"
+                TextColor="SteelBlue"
+                ></SearchBar>
+            <CollectionView x:Name="CityCollectionView" ItemsSource="{Binding FilteredCities}"
+                            Margin="20"
+                            SelectionMode="Single"
+                            SelectionChangedCommand="{Binding CitySelectedTagChangedCommand}"
+                            SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference CityCollectionView}}">
+                
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                        <Label Text="{Binding}" TextColor="SteelBlue" Margin="0,10" FontAttributes="Bold"/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

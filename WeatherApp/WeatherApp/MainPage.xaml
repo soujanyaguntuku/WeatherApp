@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:WeatherApp.ViewModels"
+             xmlns:ui="clr-namespace:WeatherApp.UI"
+             x:Class="WeatherApp.MainPage"
+             BackgroundImageSource="cloud.jpg"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout >
+        <ui:WeatherDetailsView />
+        <Frame BackgroundColor="SteelBlue" HeightRequest="40">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="map.png"
+                       Aspect="AspectFill"
+                       HorizontalOptions="StartAndExpand">
+                        <Image.GestureRecognizers>
+                          <TapGestureRecognizer Tapped="OnMapImage_Tapped" />
+                        </Image.GestureRecognizers>
+                </Image>
+                <Image Source="list.png"
+                       Aspect="AspectFill"
+                       HorizontalOptions="EndAndExpand">
+                        <Image.GestureRecognizers>
+                          <TapGestureRecognizer Command="{Binding OnListImage_Tapped}"/>
+                        </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+
+</ContentPage>
+

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="WeatherApp.UI.HourlyForecastView"
+    BindingContext="{Binding WeatherDataViewModel}">
+    
+    <ContentView.Content>
+        <StackLayout>
+            <Label Text="Next 24-hours forecast"
+                   TextColor="LightGray"
+                   FontSize="Header"/>
+       <CollectionView ItemsSource="{Binding WeatherDataList}"
+                    HeightRequest="140">
+            <CollectionView.ItemsLayout>
+                 <LinearItemsLayout Orientation="Horizontal" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout BackgroundColor="Transparent" Margin="12,0,12,5">
+                        <Image Source="sun.png"
+                            Aspect="AspectFill"
+                            HeightRequest="40"
+                            WidthRequest="40"
+                            HorizontalOptions="CenterAndExpand"/>
+                        <Label Text="{Binding Main.Temperature}"
+                               TextColor="White"
+                               FontAttributes="Bold"
+                               FontSize="Medium"
+                               HorizontalOptions="Fill"
+                               HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+             </StackLayout>
+    </ContentView.Content>
+</ContentView>
+
