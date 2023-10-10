@@ -56,10 +56,7 @@ namespace WeatherApp.ViewModels
         {
             WeatherInfo = await _openWeatherAPI.GetWeatherData(cityName);
         }
-        //public void UpdateTemperatureType(Temperature newTemperatureType)
-        //{
-        //    CurrentTemperatureType = newTemperatureType;
-        //}
+        
     }
 }
 

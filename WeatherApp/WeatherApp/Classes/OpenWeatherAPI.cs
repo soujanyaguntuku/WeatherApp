@@ -72,5 +72,20 @@ namespace WeatherApp.Classes
             return requestUri;
         }
     }
+    public class BaseClass
+    {
+        public void Display()
+        {
+            Console.WriteLine("BaseClass Display Method");
+        }
+    }
+
+    public class DerivedClass : BaseClass
+    {
+        public new void Display()
+        {
+            Console.WriteLine("DerivedClass Display Method");
+        }
+    }
 }
 

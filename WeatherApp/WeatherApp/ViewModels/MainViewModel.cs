@@ -17,6 +17,7 @@ namespace WeatherApp.ViewModels
         private readonly WeatherDataViewModel _weatherDataViewModel;
         private readonly SettingsViewModel _settingsViewModel;
         private readonly Timer _updateTimer;
+        private readonly string _location;
 
         private INavigation _navigation;
 
@@ -61,7 +62,8 @@ namespace WeatherApp.ViewModels
         
         public MainViewModel(WeatherInfoViewModel weatherInfoViewModel,
                             WeatherDataViewModel weatherDataViewModel,
-                            SettingsViewModel settingsViewModel)
+                            SettingsViewModel settingsViewModel,
+                            string location)
         {
             
             Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
@@ -69,17 +71,18 @@ namespace WeatherApp.ViewModels
             _settingsViewModel = settingsViewModel;
             _weatherInfoViewModel = weatherInfoViewModel;
             _weatherDataViewModel = weatherDataViewModel;
+            _location = location;
 
             OnListImage_Tapped = new Command(OnListImageTapped);
 
             _settingsViewModel.TemperatureTypeChanged += _settingsViewModel_TemperatureTypeChanged;
 
-            // Set up the timer to call LoadWeatherData at regular intervals (e.g., every 60 seconds)
-            _updateTimer = new Timer(10000); // Update data every 60 seconds (adjust as needed)
+            // Set up the timer to call LoadWeatherData at regular intervals (e.g., every 60 minutes)
+            _updateTimer = new Timer(3600000); 
             _updateTimer.Elapsed += OnTimerElapsed;
             _updateTimer.Start();
 
-            LoadWeatherData();
+            LoadWeatherDataAsync();
             
         }
 
@@ -109,17 +112,16 @@ namespace WeatherApp.ViewModels
 
         private async void OnTimerElapsed(object sender, ElapsedEventArgs e)
         {
-            await LoadWeatherData();
+            await LoadWeatherDataAsync();
         }
 
         public WeatherInfoViewModel WeatherInfoViewModel => _weatherInfoViewModel;
         public WeatherDataViewModel WeatherDataViewModel => _weatherDataViewModel;
 
-        private async Task LoadWeatherData()
+        private async Task LoadWeatherDataAsync()
         {
-            string _cityName = "Oslo";
-            var infoTask = _weatherInfoViewModel.LoadWeatherInfo(_cityName);
-            var dataTask = _weatherDataViewModel.LoadWeatherDataList(_cityName);
+            var infoTask = _weatherInfoViewModel.LoadWeatherInfo(_location);
+            var dataTask = _weatherDataViewModel.LoadWeatherDataList(_location);
 
             await Task.WhenAll(infoTask, dataTask);
         }

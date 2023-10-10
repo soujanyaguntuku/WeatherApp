@@ -16,7 +16,6 @@ namespace WeatherApp.ViewModels
                 return new Command((sender) =>
                 {
                     string cityName = sender as string;
-                   // StaticClasses.AppContext.LocationName = cityName;
                     TemperatureTypeChanged?.Invoke(this, new LocationChangedArguments(cityName));
                 });
             }

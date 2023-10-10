@@ -19,9 +19,13 @@ namespace WeatherApp
             InitializeComponent();
             _openWeatherAPI = new OpenWeatherAPI();
             _settingsViewModel = new SettingsViewModel();
+
             _weatherInfoViewModel = new WeatherInfoViewModel(_openWeatherAPI);
             _weatherDataViewModel = new WeatherDataViewModel(_openWeatherAPI);
-            var mainViewModel = new MainViewModel(_weatherInfoViewModel, _weatherDataViewModel, _settingsViewModel);
+            var mainViewModel = new MainViewModel(_weatherInfoViewModel,
+                                                    _weatherDataViewModel,
+                                                    _settingsViewModel,
+                                                    "Oslo");
             mainViewModel.SetNavigation(this.Navigation);
             BindingContext = mainViewModel;
         }

@@ -1,5 +1,78 @@
 ﻿<Properties StartupConfiguration="{B4C66579-CCD9-46A8-812D-4619B1B7A100}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.WeatherApp.iOS FirstBuild="True" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.401A9A6C-BFF7-4EBC-B50C-92B0CD5645A7" />
-  <MonoDevelop.Ide.ItemProperties.WeatherApp.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WeatherApp/WeatherApp/ViewModels/WeatherInfoViewModel.cs">
+    <Files>
+      <File FileName="WeatherApp/WeatherApp/UI/WeatherDetailsView.xaml" IsPinned="True" />
+      <File FileName="WeatherApp/WeatherApp/MainPage.xaml.cs" Line="35" Column="21" />
+      <File FileName="WeatherApp/WeatherApp/MainPage.xaml" />
+      <File FileName="WeatherApp/WeatherApp/ViewModels/MainViewModel.cs" Line="85" Column="33" />
+      <File FileName="WeatherApp/WeatherApp/ViewModels/BaseViewModel.cs" />
+      <File FileName="WeatherApp/WeatherApp.iOS/CustomRender/CustomSearchBarRenderer.cs" />
+      <File FileName="WeatherApp/WeatherApp/UI/WeatherDetailsView.xaml.cs" />
+      <File FileName="WeatherApp/WeatherApp/ViewModels/WeatherInfoViewModel.cs" Line="57" Column="23" />
+      <File FileName="WeatherApp/WeatherApp/UI/MapPage.xaml" />
+      <File FileName="WeatherApp/WeatherApp/UI/DailyForecastView.xaml" Line="42" Column="37" />
+      <File FileName="WeatherApp/WeatherApp/UI/HourlyForecastView.xaml" />
+      <File FileName="WeatherApp/WeatherApp/UI/SettingsPopup.xaml" />
+      <File FileName="WeatherApp/WeatherApp/UI/SettingsPopup.xaml.cs" Line="16" Column="39" />
+      <File FileName="WeatherApp/WeatherApp/Classes/TemperatureTypeChangedEventArgs.cs" />
+      <File FileName="WeatherApp/WeatherApp/UI/HourlyForecastView.xaml.cs" />
+      <File FileName="WeatherApp/WeatherApp/Models/WeatherData.cs" />
+      <File FileName="WeatherApp/WeatherApp/Converters/FahrenheitToCelsiusConverter.cs" />
+      <File FileName="WeatherApp/WeatherApp/ViewModels/SettingsViewModel.cs" Line="29" Column="16" />
+      <File FileName="WeatherApp/WeatherApp/Classes/Enums.cs" />
+      <File FileName="WeatherApp/WeatherApp/Converters/TemperatureTypeConevrter.cs" />
+      <File FileName="WeatherApp/WeatherApp/UI/DailyForecastView.xaml.cs" />
+      <File FileName="WeatherApp/WeatherApp.iOS/AppDelegate.cs" />
+      <File FileName="WeatherApp/WeatherApp/Classes/OpenWeatherAPI.cs" Line="51" Column="41" />
+      <File FileName="WeatherApp/WeatherApp/Models/Weather.cs" />
+      <File FileName="WeatherApp/WeatherApp/Models/Main.cs" />
+      <File FileName="WeatherApp/WeatherApp/ViewModels/CityListViewModel.cs" Line="18" Column="56" />
+      <File FileName="WeatherApp/WeatherApp/UI/SearchLocationPage.xaml" Line="19" Column="51" />
+      <File FileName="WeatherApp/WeatherApp/UI/SearchLocationPage.xaml.cs" Line="9" Column="4" />
+      <File FileName="WeatherApp/WeatherApp/Classes/LocationChangedArguments.cs" />
+      <File FileName="WeatherApp/WeatherApp/StaticClasses/AppContext.cs" />
+      <File FileName="WeatherApp/WeatherApp/StaticClasses/TemperatureConverter.cs" />
+      <File FileName="WeatherApp/WeatherApp/Models/Sys.cs" />
+      <File FileName="WeatherApp/WeatherApp/Models/HourlyWeatherData.cs" />
+      <File FileName="WeatherApp/WeatherApp/Converters/StringToDateTimeConverter.cs" />
+      <File FileName="WeatherApp/WeatherApp/Interfaces/IWeatherAPI.cs" />
+      <File FileName="WeatherApp/WeatherApp.iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="WeatherApp/WeatherApp/ViewModels/WeatherDataViewModel.cs" Line="58" Column="7" />
+      <File FileName="../../../../../Library/Frameworks/Xamarin.iOS.framework/Versions/Current/src/Xamarin.iOS/mcs/class/referencesource/mscorlib/system/runtime/exceptionservices/exceptionservicescommon.cs" Line="157" Column="1" />
+      <File FileName="WeatherApp/WeatherApp/obj/project.assets.json" Line="223" Column="41" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WeatherApp">
+            <Node name="WeatherApp">
+              <Node name="UI" expanded="True">
+                <Node name="SearchLocationPage.xaml" expanded="True" />
+                <Node name="SettingsPopup.xaml" expanded="True" />
+              </Node>
+              <Node name="ViewModels">
+                <Node name="WeatherInfoViewModel.cs" selected="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+            <Node name="WeatherApp.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.1.2" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.WeatherApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.401A9A6C-BFF7-4EBC-B50C-92B0CD5645A7" />
+  <MonoDevelop.Ide.ItemProperties.WeatherApp.Android AndroidDesignerPreferredTheme="MainTheme" PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

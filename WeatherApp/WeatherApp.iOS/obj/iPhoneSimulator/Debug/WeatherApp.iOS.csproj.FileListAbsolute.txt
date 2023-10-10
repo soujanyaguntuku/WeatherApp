@@ -68,4 +68,3 @@
 /Users/soujanyaguntuku/Projects/Xamarin/WeatherApp/WeatherApp/WeatherApp.iOS/obj/iPhoneSimulator/Debug/WeatherApp.iOS.csproj.CopyComplete
 /Users/soujanyaguntuku/Projects/Xamarin/WeatherApp/WeatherApp/WeatherApp.iOS/obj/iPhoneSimulator/Debug/WeatherApp.iOS.exe
 /Users/soujanyaguntuku/Projects/Xamarin/WeatherApp/WeatherApp/WeatherApp.iOS/obj/iPhoneSimulator/Debug/WeatherApp.iOS.pdb
-/Users/soujanyaguntuku/Projects/Xamarin/WeatherApp/WeatherApp/WeatherApp.iOS/obj/iPhoneSimulator/Debug/resourcestamps/WeatherApp.stamp

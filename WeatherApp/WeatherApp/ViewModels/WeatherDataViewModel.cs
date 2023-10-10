@@ -63,11 +63,16 @@ namespace WeatherApp.ViewModels
 
         private void loadWeatherDatafromAPI()
         {
-            foreach (var item in _weatherDataFromAPI.HourlyWeatherDataList)
+            WeatherDataList.Clear();
+            if (_weatherDataFromAPI?.HourlyWeatherDataList != null)
             {
-                updateWeatherDataTemperature(item);
-                WeatherDataList.Add(item);
+                foreach (var item in _weatherDataFromAPI.HourlyWeatherDataList)
+                {
+                    updateWeatherDataTemperature(item);
+                    WeatherDataList.Add(item);
+                }
             }
+               
         }
         private void updateWeatherDataList()
         {
